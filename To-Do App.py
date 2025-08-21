@@ -1,8 +1,12 @@
 tasks = []
 
-task = input("Enter a task: ")
-tasks.append(task)
+while True:
+    task = input("Enter a task (or type 'quit' to stop):")
+    if task.lower() == "quit":
+        break
+    tasks.append(task)
+    print(f"Task '{task}' added!")
 
-print("Your tasks:")
+print("\nYour tasks:")
 for t in tasks:
     print("-", t)
